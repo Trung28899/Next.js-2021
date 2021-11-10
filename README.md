@@ -1,0 +1,27 @@
+LEARNING GUIDES FOR NEXT.JS
+
+## I. How To Get Started:
+
+npx create-next-app appName
+npm install
+npm run dev
+
+---
+
+## II. What is Next.js and why do we use it ?
+
+=> See FUNDAMENTAL.md
+
+---
+
+## III. Repository content:
+
+- Next.js Routing
+
+=> See More in HISTORY.md
+
+---
+
+## Other Resources:
+
+- Official Docs: https://nextjs.com/
