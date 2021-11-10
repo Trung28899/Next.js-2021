@@ -21,3 +21,10 @@
   +, Need to be [parameterName].js
   +, Any other routes that is not defined, will be directed to that page
   => see code: ./news/[newsId].js to see how to access parameters
+
+2. 2nd Commit: Linking between pages:
+
+- See ./news/index.js
+- After this commit, the file structure is totally different
+- Syntax:
+  import Link from "next/link";<Link href="/news/something">Something else bro</Link>
