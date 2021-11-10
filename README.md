@@ -2,9 +2,9 @@ LEARNING GUIDES FOR NEXT.JS
 
 ## I. How To Get Started:
 
-npx create-next-app appName
-npm install
-npm run dev
+- npx create-next-app appName
+- npm install
+- npm run dev
 
 ---
 
