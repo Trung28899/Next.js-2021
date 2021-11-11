@@ -44,3 +44,8 @@
         router.push("/routeName");
     - Much like useHistory() in React
     - See ./components/meetups/MeetupItem.js
+
+## 5. 5th Commit: (SSG) Static Site Generation & (ISR) Incremental Static Generation
+
+    - See FUNDAMENTAL.md to understand what this is
+    - Code in index.js to see how to do it

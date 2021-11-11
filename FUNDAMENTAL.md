@@ -1,5 +1,3 @@
-Course Link: https://www.udemy.com/course/react-the-complete-guide-incl-redux
-
 ## 1. What is NextJS ?
 
         - NextJs is a Framework that is built upon React.js. Note that:
@@ -49,3 +47,48 @@ Key Features of Next.js:
         - KEY FEATURE 3: Fullstack Capabilities
             +, Easily add backend code to Next / React app
             +, Next.js can store data, get data, authentication, communicate with database in general
+
+## 3. Page Pre-Rendering:
+
+        - When a request is sent to a Next.js application:
+            +, Server will return the pre-rendered page
+                > Pre-rendered Page: page that has all the data rendered at build time or at server
+
+                > comparing to normal React.js app:
+                a skeleton html folder will be return and rendered first
+                then the async data will be requested from the client
+
+            +, After the initial load, React.js will takes over to make the page fully
+                interactive and will be able to request data on the fly
+
+        - Two Forms of Pre-Rendering
+            +, Static Generation
+            +, Server-Side Rendering
+
+        => Demontration Picture: https://drive.google.com/file/d/1qb9NP0M8-tL8-BoYTJbXwhqkS90Tx1zP/view?usp=sharing
+        => See video 335 - 336 for further explanation
+
+        a. STATIC GENERATION:
+
+            - Time of rendering:
+                +, Your Page is not pre-rendered on the fly or on the server
+                +, Your Page is Pre-rendered when you build your application, before you to deploy to server
+
+                    => Good for static site that the page will not change at all after deployment
+                    => Not Good for fetching data at a database (that will potentially change)
+
+            - Incremental Static Generation:
+                +, Same idea as Static Generation
+                +, However, the page is re-render every (for example 10 second) on the server
+                if we set the re-render time as 10
+                    => syntax for this: set revalidate: 10 in getStaticProps
+                    => See in ./pages/index.js, 5th Commit
+
+            - Example: see 5th Commit, ./pages/index.js
+            - When run npm run build, see the notes to see what pages is:
+                +, (Static)  automatically rendered as static HTML (uses no initial props)
+                +, (SSG)     automatically generated as static HTML + JSON (uses getStaticProps)
+                +, (Server)  server-side renders at runtime
+                +, (ISR)     incremental Static generation
+
+        b. SERVER-SIDE RENDERING

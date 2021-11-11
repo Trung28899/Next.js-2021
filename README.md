@@ -20,6 +20,7 @@ LEARNING GUIDES FOR NEXT.JS
 - Linking Between Pages
 - \_app.js Explained & New project setup
 - Redirect Pages Programatically, useRouter
+- (SSG) Static Site Generation & (ISR) Incremental Static Generation
 
 => See More in HISTORY.md
 
@@ -28,3 +29,4 @@ LEARNING GUIDES FOR NEXT.JS
 ## Other Resources:
 
 - Official Docs: https://nextjs.com/
+- Course Link: https://www.udemy.com/course/react-the-complete-guide-incl-redux
