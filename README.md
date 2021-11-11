@@ -17,6 +17,9 @@ LEARNING GUIDES FOR NEXT.JS
 ## III. Repository content:
 
 - Next.js Routing
+- Linking Between Pages
+- \_app.js Explained & New project setup
+- Redirect Pages Programatically, useRouter
 
 => See More in HISTORY.md
 
