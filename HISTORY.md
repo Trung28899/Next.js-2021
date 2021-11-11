@@ -60,3 +60,17 @@
         +, see getStaticPaths()
         +, see getStaticProps(context)
         +, see how to get dynamic route in getStaticProps()
+
+## 7. 7th Commit: api routes setup & send http request to api route
+
+    - Knowledge & Set up Command:
+        +, npm install --save mongodb
+        +, To understand more, see FUNDAMENTAL.md
+
+    - API routes setup:
+        +, See ./pages/api/new-meetup.js
+        +, Can see how to connect with Mongo DB and insert a document
+        +, Any code in api route won't be reveal to the browser so it is safe
+
+    - Sending request to api route:
+        +, See ./pages/new-meetup/index.js

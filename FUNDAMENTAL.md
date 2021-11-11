@@ -96,3 +96,13 @@ Key Features of Next.js:
 
         => If your data doesn't change multiple time every seconds, Incremental Static Generation is actually
         a better option than Server-Side Rendering because you don't have to wait for the page to be render
+
+## 4. API Routes:
+
+        - API Routes is much like backend code:
+            +, Receive HTTP Requests, interact with the database and send a response
+
+        - API has to follow a convention:
+            +, The api routes has to be within the pages folder
+            +, Just like other pages, the route doesn't need to be setup
+                because it is relies on the file name and folder structure
