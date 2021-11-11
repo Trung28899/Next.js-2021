@@ -1,4 +1,4 @@
-LEARNING GUIDES FOR NEXT.JS
+## LEARNING GUIDES FOR NEXT.JS
 
 ## I. How To Get Started:
 
@@ -18,9 +18,12 @@ LEARNING GUIDES FOR NEXT.JS
 
 - Next.js Routing
 - Linking Between Pages
+
 - \_app.js Explained & New project setup
 - Redirect Pages Programatically, useRouter
+
 - (SSG) Static Site Generation & (ISR) Incremental Static Generation
+- (SSR) Server Side Rendering & Dynamic Route (SSG) Static Site Generation
 
 => See More in HISTORY.md
 

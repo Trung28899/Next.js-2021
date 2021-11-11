@@ -92,3 +92,7 @@ Key Features of Next.js:
                 +, (ISR)     incremental Static generation
 
         b. SERVER-SIDE RENDERING
+
+
+        => If your data doesn't change multiple time every seconds, Incremental Static Generation is actually
+        a better option than Server-Side Rendering because you don't have to wait for the page to be render

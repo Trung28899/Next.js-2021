@@ -49,3 +49,14 @@
 
     - See FUNDAMENTAL.md to understand what this is
     - Code in index.js to see how to do it
+
+## 6. 6th Commit: (SSR) Server Side Rendering & Dynamic Route (SSG) Static Site Generation
+
+    - SSR render page at server for any incoming request
+        => See code in ./pages/index.js, see getServerSideProps(context)
+
+    - Dynamic Route Static Site Generation:
+        +, Code in [meetupId]/index.js
+        +, see getStaticPaths()
+        +, see getStaticProps(context)
+        +, see how to get dynamic route in getStaticProps()

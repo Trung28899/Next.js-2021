@@ -44,13 +44,41 @@ const HomePage = (props) => {
   }, []);
   */
 
-  // Component is accessing props from getStaticProps(): Static Generation
+  // Component is accessing props from getStaticProps() or getServerSideProps()
   return (
     <div>
       <MeetupList meetups={props.meetups} />
     </div>
   );
 };
+
+/*
+  This is Server-Side Generation
+  See video 337 for this
+
+  This code is run in server to fetch the data
+  browser won't be able to see this code. 
+
+  Server-Side rendering render page at server for any
+  incoming request
+
+  => If your data doesn't change multiple time every seconds, 
+  Incremental Static Generation is actually
+  a better option than Server-Side Rendering 
+  because you don't have to wait for the page to be render
+*/
+
+export async function getServerSideProps(context) {
+  // Able to access request object from the browser and also response object
+  const { req, res } = context;
+
+  // Fetch data from an API
+  return {
+    props: {
+      meetups: DUMMY_MEETUPS,
+    },
+  };
+}
 
 /*
   This is Static Generation
@@ -73,15 +101,16 @@ const HomePage = (props) => {
   every 10 second so that the data won't be outdated. The re-generated pages
   will then replace the old generated pages
 */
-export async function getStaticProps() {
-  // Fetching data from API
-  const dataFetched = DUMMY_MEETUPS;
-  return {
-    props: {
-      meetups: dataFetched,
-    },
-    revalidate: 10,
-  };
-}
+
+// export async function getStaticProps() {
+//   // Fetching data from API
+//   const dataFetched = DUMMY_MEETUPS;
+//   return {
+//     props: {
+//       meetups: dataFetched,
+//     },
+//     revalidate: 10,
+//   };
+// }
 
 export default HomePage;
