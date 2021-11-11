@@ -28,3 +28,11 @@
 - After this commit, the file structure is totally different
 - Syntax:
   import Link from "next/link";<Link href="/news/something">Something else bro</Link>
+
+3. 3rd Commit: \_app.js explained & New project setup
+
+- \_app.js:
+  +, Is a root component that Next.js Will render. Much like the index.js in React.js
+  +, Any settings that applied to the whole app, you can put it here (like App.js or index.js in React)
+
+- See the Layout in this \_app.js file to understand further
