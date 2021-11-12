@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import NewMeetUpForm from "./component/NewMeetupForm";
+import NewMeetUpForm from "../../components/meetups/NewMeetupForm";
 import { useRouter } from "next/router";
 
 const NewMeetUp = () => {
