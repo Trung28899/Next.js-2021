@@ -112,4 +112,4 @@
         +, Step 4: When we got the production file, we can run $ npm start on the
         production server to get the application up and running
         (For Vercel, we don't need to do this. Everything is done after step 2
-            for Vercel)
+        for Vercel)
