@@ -1,8 +1,8 @@
-import React from "react";
+import React, { Fragment } from "react";
 import NewMeetUpForm from "../../components/meetups/NewMeetUpForm";
 import { useRouter } from "next/router";
 
-const newMeetup = () => {
+const NewMeetUp = () => {
   const router = useRouter();
 
   const addMeetupHandler = async (enteredMeetupData) => {
@@ -19,7 +19,11 @@ const newMeetup = () => {
     router.push("/");
   };
 
-  return <NewMeetUpForm onAddMeetup={addMeetupHandler} />;
+  return (
+    <Fragment>
+      <NewMeetUpForm onAddMeetup={addMeetupHandler} />
+    </Fragment>
+  );
 };
 
-export default newMeetup;
+export default NewMeetUp;

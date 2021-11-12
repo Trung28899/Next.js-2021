@@ -95,3 +95,21 @@
           content="Browse huge list of highly active Meetups"
         />
     </Head>
+
+## 10. 10th Commit: Deployment (Vercel Deployment):
+
+    - Steps:
+        +, Step 1: Push code to Github
+        +, Step 2: Login To Vercel to connect to your Github
+        +, Step 3: When you deploy code to vercel, Vercel will automatically
+        build the production code and host it for you. For other hosting,
+        you will have to run: $ npm run build
+        > to get the production folder
+
+        +, When we run: $ npm run build > a .next folder will be
+        created for production
+
+        +, Step 4: When we got the production file, we can run $ npm start on the
+        production server to get the application up and running
+        (For Vercel, we don't need to do this. Everything is done after step 2
+            for Vercel)
