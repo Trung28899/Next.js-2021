@@ -2,6 +2,7 @@ import React from "react";
 import MeetupDetail from "../../components/meetups/MeetupDetail";
 import { MongoClient, ObjectId } from "mongodb";
 
+// New Fixes for deploy
 const MeetUpID = (props) => {
   return (
     <MeetupDetail
