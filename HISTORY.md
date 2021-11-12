@@ -74,3 +74,11 @@
 
     - Sending request to api route:
         +, See ./pages/new-meetup/index.js
+
+## 8. 8th Commit: Fetching Data From Database & Set All Routes For getStaticPath():
+
+    - Fetching Data From Database:
+        +, See ./pages/index.js in getStaticProps()
+
+    - Set All Dynamic Routes Possible For getStaticPath():
+        +, See ./pages/[meetupId]/index.js, under getStaticPath()

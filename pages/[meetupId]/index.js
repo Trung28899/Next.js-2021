@@ -1,5 +1,6 @@
 import React from "react";
 import MeetupDetail from "../../components/meetups/MeetupDetail";
+import { MongoClient, ObjectId } from "mongodb";
 
 const MeetUpID = (props) => {
   return (
@@ -39,35 +40,52 @@ const MeetUpID = (props) => {
 */
 
 export async function getStaticPaths() {
+  const client = await MongoClient.connect(
+    "mongodb+srv://trung:trungtrinh38@linkshortcluster.whf1t.mongodb.net/linkshort"
+  );
+
+  const db = client.db();
+  const meetupsCollection = db.collection("meetups");
+
+  /*
+    this query will get all the records but will only get the id of all the 
+    records in the database
+
+    This is so that we can have the routes setup for this dynamic page dynamically
+  */
+  const meetups = await meetupsCollection.find({}, { _id: 1 }).toArray();
+
+  client.close();
+
   return {
-    fallback: true,
-    paths: [
-      {
-        params: {
-          meetupId: "m1",
-        },
-      },
-      {
-        params: {
-          meetupId: "m2",
-        },
-      },
-    ],
+    fallback: false,
+    paths: meetups.map((meetup) => ({
+      params: { meetupId: meetup._id.toString() },
+    })),
   };
 }
 
 export async function getStaticProps(context) {
   // Fetching data from API
   const meetupId = context.params.meetupId;
-  console.log(meetupId);
+
+  const client = await MongoClient.connect(
+    "mongodb+srv://trung:trungtrinh38@linkshortcluster.whf1t.mongodb.net/linkshort"
+  );
+
+  const db = client.db();
+  const meetupsCollection = db.collection("meetups");
+
+  const meetup = await meetupsCollection.findOne({ _id: ObjectId(meetupId) });
+
+  client.close();
 
   return {
     props: {
-      title: "A Third Meet Up",
-      image:
-        "https://firebasestorage.googleapis.com/v0/b/trung-portfolio.appspot.com/o/personal%2Favatar.jpg?alt=media&token=08f1bd82-670c-47a2-be43-e5acf92605df",
-      address: "Some Address 5, 12345 Some City",
-      description: "This is a Third Meet up bro",
+      title: meetup.title,
+      address: meetup.address,
+      image: meetup.image,
+      description: meetup.description,
     },
     revalidate: 10,
   };

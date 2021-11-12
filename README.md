@@ -25,6 +25,8 @@
 - (SSG) Static Site Generation & (ISR) Incremental Static Generation
 - (SSR) Server Side Rendering & Dynamic Route (SSG) Static Site Generation
 
+- API routes setup & send http request to api route
+
 => See More in HISTORY.md
 
 ---
