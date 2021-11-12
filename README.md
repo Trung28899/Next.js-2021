@@ -26,6 +26,9 @@
 - (SSR) Server Side Rendering & Dynamic Route (SSG) Static Site Generation
 
 - API routes setup & send http request to api route
+- Fetching Data From Database & Set All Routes For getStaticPath()
+
+- Setting Page Header
 
 => See More in HISTORY.md
 

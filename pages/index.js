@@ -1,17 +1,25 @@
-import React from "react";
+import React, { Fragment } from "react";
 import MeetupList from "../components/meetups/MeetupList";
 /*  
     If we import this and we don't use this code in this file, 
     we will get an error at compile time
 */
 import { MongoClient } from "mongodb";
+import Head from "next/head";
 
 const HomePage = (props) => {
   // Component is accessing props from getStaticProps() or getServerSideProps()
   return (
-    <div>
+    <Fragment>
+      <Head>
+        <title>Next.js Meetup</title>
+        <meta
+          name="description"
+          content="Browse huge list of highly active Meetups"
+        />
+      </Head>
       <MeetupList meetups={props.meetups} />
-    </div>
+    </Fragment>
   );
 };
 

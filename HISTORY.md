@@ -82,3 +82,16 @@
 
     - Set All Dynamic Routes Possible For getStaticPath():
         +, See ./pages/[meetupId]/index.js, under getStaticPath()
+
+## 9. 9th Commit: Setting Page Header:
+
+    - See ./pages/_app.js and ./pages/index.js
+    - Syntax:
+    import Head from "next/head";
+    <Head>
+        <title>Next.js Meetup</title>
+        <meta
+          name="description"
+          content="Browse huge list of highly active Meetups"
+        />
+    </Head>
