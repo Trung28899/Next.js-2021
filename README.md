@@ -34,7 +34,10 @@
 
 ---
 
-## IV. Deployment:
+## IV. Next Step:
+
+- Learn how to manage Application State with Next.js
+  +, Use either useContext() or Redux
 
 ---
 
